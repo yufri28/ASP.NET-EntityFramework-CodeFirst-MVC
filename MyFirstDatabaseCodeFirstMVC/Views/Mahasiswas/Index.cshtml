@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MyFirstDatabaseCodeFirstMVC.Models.Mahasiswa>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Jk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Angkatan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NoHp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Alamat)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nama)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Jk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Angkatan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NoHp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Alamat)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Nim }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Nim }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Nim })
+        </td>
+    </tr>
+}
+
+</table>

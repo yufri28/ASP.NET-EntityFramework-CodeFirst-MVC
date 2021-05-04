@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 using MyFirstDatabaseCodeFirstMVC.Models;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace MyFirstDatabaseCodeFirstMVC.Context
 {
@@ -11,7 +12,12 @@ namespace MyFirstDatabaseCodeFirstMVC.Context
     {
         public ProductManagementContext() : base("ProductManagementContextDB") { }
 
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Mahasiswa> Mahasiswas { get; set; }
+        public DbSet<MataKuliah> MataKuliahs { get; set; }
+        public DbSet<Semester> Semesters { get; set; }
+        public DbSet<Nilai> Nilais { get; set; }
+
+       
+
     }
 }

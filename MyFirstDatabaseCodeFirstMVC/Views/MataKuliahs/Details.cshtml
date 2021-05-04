@@ -1,0 +1,35 @@
+﻿@model MyFirstDatabaseCodeFirstMVC.Models.MataKuliah
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MataKuliah</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NamaMk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamaMk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JumlahSks)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JumlahSks)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.KodeMk }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MyFirstDatabaseCodeFirstMVC.Models.Nilai>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Mahasiswa.Nama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MataKuliah.NamaMk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Semester.NamaSemester)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NilaiAngka)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NilaiHuruf)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mahasiswa.Nama)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MataKuliah.NamaMk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Semester.NamaSemester)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NilaiAngka)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NilaiHuruf)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { Nim=item.Nim, KodeMk=item.KodeMk, KodeSemester = item.KodeSemester}) |
+            @Html.ActionLink("Details", "Details", new { Nim = item.Nim, KodeMk = item.KodeMk, KodeSemester = item.KodeSemester }) |
+            @Html.ActionLink("Delete", "Delete", new { Nim = item.Nim, KodeMk = item.KodeMk, KodeSemester = item.KodeSemester })
+        </td>
+    </tr>
+}
+
+</table>

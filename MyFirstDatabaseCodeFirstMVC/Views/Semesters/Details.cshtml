@@ -1,0 +1,35 @@
+﻿@model MyFirstDatabaseCodeFirstMVC.Models.Semester
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Semester</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NamaSemester)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamaSemester)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TahunAjaran)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TahunAjaran)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.KodeSemester }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

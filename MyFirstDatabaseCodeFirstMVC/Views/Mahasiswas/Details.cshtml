@@ -1,0 +1,59 @@
+﻿@model MyFirstDatabaseCodeFirstMVC.Models.Mahasiswa
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Mahasiswa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nama)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nama)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Jk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Jk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Angkatan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Angkatan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoHp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoHp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alamat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alamat)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Nim }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
